@@ -83,7 +83,7 @@
 <body>
   <main>
     <h1>Política de Privacidade</h1>
-    <p class="sub">LavagemJá — última atualização: 6 de setembro de 2026</p>
+    <p class="sub">LavagemJá — última atualização: 18 de setembro de 2026</p>
 
     <p>Esta política descreve como o aplicativo <strong>LavagemJá</strong> coleta, usa e protege
       informações. O app é operado por <strong>Felipe Augusto Aparecido Silva Atividades de Ensino LTDA</strong>
@@ -98,7 +98,9 @@
     <ul>
       <li>Nome e e-mail usados no cadastro</li>
       <li>Senha (armazenada de forma criptografada — nunca temos acesso ao texto original)</li>
-      <li>Dados da empresa: nome do estabelecimento e informações de contato</li>
+      <li>Telefone de contato do operador</li>
+      <li>Dados da empresa: nome do estabelecimento e endereço (CEP, logradouro,
+        cidade e estado), informados no cadastro</li>
     </ul>
     <p><strong>Dados operacionais inseridos pelo operador:</strong></p>
     <ul>
@@ -107,8 +109,9 @@
       <li>Valores, horários e status das ordens de serviço</li>
     </ul>
     <p><strong>Dados de assinatura:</strong> status do plano e histórico de pagamentos.
-      Os dados de cartão de crédito são processados diretamente pela Apple (In-App Purchase)
-      e <strong>não são coletados nem armazenados por nós</strong>.</p>
+      O pagamento é concluído fora do aplicativo, no navegador do seu dispositivo, e processado
+      pela <strong>Stripe</strong>, que recebe os dados do cartão diretamente. Esses dados
+      <strong>não são coletados nem armazenados por nós</strong>.</p>
     <p>Não coletamos localização, contatos do dispositivo, fotos, nem usamos os dados para
       publicidade ou rastreamento entre aplicativos.</p>
 
@@ -116,17 +119,27 @@
     <ul>
       <li>Autenticar o acesso e manter a conta funcionando</li>
       <li>Registrar e acompanhar ordens de serviço, clientes e relatórios</li>
-      <li>Permitir que o operador envie mensagens de WhatsApp aos seus próprios clientes
-        (o envio parte do dispositivo do operador, pelo app do WhatsApp)</li>
+      <li>Enviar aos clientes finais do operador, por WhatsApp, as mensagens de andamento
+        da lavagem que ele configurou. O envio é feito pelos nossos servidores através da
+        <strong>Twilio</strong>, que recebe o telefone do destinatário para entregar a mensagem</li>
       <li>Controlar o período de teste e a assinatura</li>
       <li>Prestar suporte técnico quando solicitado</li>
     </ul>
 
     <h2>3. Compartilhamento</h2>
-    <p>Não vendemos, alugamos nem comercializamos dados pessoais. Compartilhamos informações
-      apenas com prestadores necessários ao funcionamento do serviço (hospedagem e infraestrutura
-      em nuvem, e a Apple para processamento de assinaturas), ou quando exigido por ordem judicial
-      ou obrigação legal.</p>
+    <p>Não vendemos, alugamos nem comercializamos dados pessoais, e não os compartilhamos com
+      corretores de dados (<em>data brokers</em>) nem com redes de publicidade. Compartilhamos
+      informações apenas com prestadores necessários ao funcionamento do serviço, que as tratam
+      seguindo nossas instruções:</p>
+    <ul>
+      <li><strong>Hospedagem e infraestrutura em nuvem</strong> — armazenamento e execução da
+        aplicação</li>
+      <li><strong>Stripe</strong> — processamento dos pagamentos da assinatura</li>
+      <li><strong>Twilio</strong> — entrega das mensagens de WhatsApp aos clientes finais do
+        operador</li>
+    </ul>
+    <p>Também podemos compartilhar informações quando exigido por ordem judicial ou obrigação
+      legal.</p>
 
     <h2>4. Responsabilidade do operador</h2>
     <p>Ao cadastrar dados de seus clientes no LavagemJá, o operador atua como controlador desses
